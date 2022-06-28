@@ -36,6 +36,18 @@
 <?php endif; ?>
 
 
+<div>
+    <form action="<?php echo e(route('export')); ?>" method="get">
+        <?php echo csrf_field(); ?>
+        <select name="selected_y_m">
+            <option value="" selected>---</option>
+            <?php $__currentLoopData = $exist_y_m; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $y_m): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <option value="<?php echo e($y_m->year_month); ?>"><?php echo e($y_m->year_month); ?></option>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        </select>
+        <button type="submit">選択した年月の勤怠データをダウンロード(.csv)</button>
+    </form>
+</div>
 
 
 <?php $__env->stopSection(); ?>

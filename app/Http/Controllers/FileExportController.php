@@ -27,8 +27,13 @@ class FileExportController extends Controller
         "updated_at",
     ];
 
-    public function download()
+    public function download(Request $request)
     {
+        //////////////
+        // submitで入ってないからどうにかする
+        //////////////
+        dd($request);
+
         // ファイルヘッダーとなる文字列作成
         $header = collect(self::CSV_EXPORT_HEADER)->implode(",");
         // select句になる文字列作成

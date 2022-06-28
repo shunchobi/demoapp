@@ -38,6 +38,18 @@
 @endif
 
 
+<div>
+    <form action="{{ route('export') }}" method="get">
+        @csrf
+        <select name="selected_y_m">
+            <option value="" selected>---</option>
+            @foreach ($exist_y_m as $y_m)
+                <option value="{{ $y_m->year_month }}">{{ $y_m->year_month }}</option>
+            @endforeach
+        </select>
+        <button type="submit">選択した年月の勤怠データをダウンロード(.csv)</button>
+    </form>
+</div>
 
 
 @endsection

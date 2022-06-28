@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Card;
+use App\Models\OutPutFormatYearMonth;
+use App\Models\OutPutFromat;
 use App\Models\User;
 use App\Models\UserTouchHistory;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Builder;
 
 class CreateUserController extends Controller
 {
@@ -15,8 +19,9 @@ class CreateUserController extends Controller
     {
         $non_registered_cards = Card::where('user_id', null)->get();
         $users = User::get();
+        $exist_y_m = OutPutFormatYearMonth::select('year_month')->get();
 
-        return view('management', ['non_registered_cards' => $non_registered_cards, 'users' => $users]);
+        return view('management', ['non_registered_cards' => $non_registered_cards, 'users' => $users, 'exist_y_m' => $exist_y_m]);
     }
 
 

@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Models\OutPutFormatYearMonth;
 use App\Models\OutPutFromat;
 use App\Models\User;
 use App\Models\UserTouchHistory;
@@ -82,26 +83,39 @@ class FormatData extends Command
                  $end_time_round_down = new Carbon($end_time['touched_at']);
                  // 15分切り下げ
                  $end_time_round_down = $end_time_round_down->subMinutes($end_time_round_down->minute % $round_down_time)->format('Y-m-d H:i:00'); 
+
+                 if ($start_time_round_up > $end_time_round_down){
+                    $end_time_round_down = $start_time_round_up;
+                 }
             }
             else{
                 Log::info('日付が '.$target_date->toString().' のuser_id = '.$user->id.'のtouched_atデータが不十分です。データを追加してください');
             }
 
             // 集計対象日の user の outputformat が登録済みなら更新、なければ作成
-            OutPutFromat::updateOrInsert(
+            OutPutFromat::updateOrCreate(
                 [
                     'user_id' => $user->id, 
                     'date' => $target_date->toDateString(),
                 ],
                 [
-                    'user_id' => $user->id, 
-                    'date' => $target_date->toDateString(), 
+                    // 'user_id' => $user->id, 
+                    // 'date' => $target_date->toDateString(), 
                     'name' => User::find($user->id)->name, 
                     'original_start_time' => $star_time['touched_at'] ?? null, 
                     'original_end_time' => $end_time['touched_at'] ?? null, 
                     'round_up_start_time' => $start_time_round_up, 
                     'round_down_end_time' => $end_time_round_down,
                 ],
+            );
+
+            OutPutFormatYearMonth::updateOrCreate(
+                [
+                    'year_month' =>  $target_date->format('Y-m'), 
+                ],
+                [
+                    // 'year_month' =>  $target_date->format('Y-m'), 
+                ]
             );
         }
         // end for
