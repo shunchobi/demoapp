@@ -21,11 +21,20 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('command:test') // 実行するコマンドの名前
-        ->dailyAt('00:00') 
+        $schedule->command('command:formatdata') // 実行するコマンドの名前
+        ->hourly() //->daily();	毎日深夜１２時に実行
+        ->onFailure(function(){
+            Log::info('データフォーマット失敗');
+        })
         ->onSuccess(function () {
-            Log::info('成功');
-        }); // 日時を指定する処理などを書く。
+            Log::info('データフォーマット成功');
+        }); 
+
+        // $schedule->call(function () {
+        //     DB::table('recent_users')->delete();
+        // })->daily();
+
+        // $schedule->command(SendEmailsCommand::class, ['Taylor', '--force'])->daily();
     }
 
     /**
