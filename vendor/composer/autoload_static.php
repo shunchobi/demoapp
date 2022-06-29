@@ -539,6 +539,7 @@ class ComposerStaticInite7baa25cf2850a83e30f3d945b405e78
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Models\\Card' => __DIR__ . '/../..' . '/app/Models/Card.php',
+        'App\\Models\\ManualTimeContorller' => __DIR__ . '/../..' . '/app/Models/ManualTimeContorller.php',
         'App\\Models\\OutPutFormatYearMonth' => __DIR__ . '/../..' . '/app/Models/OutPutFormatYearMonth.php',
         'App\\Models\\OutPutFromat' => __DIR__ . '/../..' . '/app/Models/OutPutFromat.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',

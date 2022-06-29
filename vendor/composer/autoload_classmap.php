@@ -30,6 +30,7 @@ return array(
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Models\\Card' => $baseDir . '/app/Models/Card.php',
+    'App\\Models\\ManualTimeContorller' => $baseDir . '/app/Models/ManualTimeContorller.php',
     'App\\Models\\OutPutFormatYearMonth' => $baseDir . '/app/Models/OutPutFormatYearMonth.php',
     'App\\Models\\OutPutFromat' => $baseDir . '/app/Models/OutPutFromat.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
