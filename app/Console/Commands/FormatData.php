@@ -53,7 +53,7 @@ class FormatData extends Command
     public function handle()
     {
         // 集計対象日を定義
-        $target_date = Carbon::yesterday();
+        $target_date = Carbon::today();
 
         // user list 取得
         $users = User::get();
@@ -75,14 +75,14 @@ class FormatData extends Command
                  // Carbonインスタンス作成
                  $start_time_round_up = new Carbon($star_time['touched_at']);
                  // 15分切り上げ
-                 $start_time_round_up = $start_time_round_up->addMinutes($round_up_time - $start_time_round_up->minute % $round_up_time)->format('Y-m-d H:i:00');
+                 $start_time_round_up = $start_time_round_up->addMinutes($round_up_time - $start_time_round_up->minute % $round_up_time)->format('H:i:00');
  
                  // 切り下げる分数
                  $round_down_time = 15;
                  // Carbonインスタンス作成
                  $end_time_round_down = new Carbon($end_time['touched_at']);
                  // 15分切り下げ
-                 $end_time_round_down = $end_time_round_down->subMinutes($end_time_round_down->minute % $round_down_time)->format('Y-m-d H:i:00'); 
+                 $end_time_round_down = $end_time_round_down->subMinutes($end_time_round_down->minute % $round_down_time)->format('H:i:00'); 
 
                  if ($start_time_round_up > $end_time_round_down){
                     $end_time_round_down = $start_time_round_up;

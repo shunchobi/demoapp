@@ -2,6 +2,10 @@
 
 @section('content')
 
+<div>
+    
+</div>
+
 @if (count($non_registered_cards) > 0)
 <div>
     <table>
