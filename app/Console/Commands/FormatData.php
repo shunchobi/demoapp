@@ -120,7 +120,7 @@ class FormatData extends Command
     public function handle()
     {
         // 集計対象日を定義
-        $target_date = Carbon::today();
+        $target_date = Carbon::yesterday();
 
         // user list 取得
         $users = User::get();

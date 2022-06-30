@@ -8063,3 +8063,138 @@ Not enough data available to satisfy format at /var/www/html/vendor/nesbot/carbo
 #16 {main}
 "} 
 [2022-06-29 18:00:03] local.INFO: データフォーマット失敗  
+[2022-06-29 18:04:57] local.ERROR: count(): Argument #1 ($value) must be of type Countable|array, null given {"exception":"[object] (TypeError(code: 0): count(): Argument #1 ($value) must be of type Countable|array, null given at /var/www/html/app/Console/Commands/FormatData.php:102)
+[stacktrace]
+#0 /var/www/html/app/Console/Commands/FormatData.php(102): count()
+#1 /var/www/html/app/Console/Commands/FormatData.php(157): App\\Console\\Commands\\FormatData->getStartEndFromManualTime()
+#2 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Console\\Commands\\FormatData->handle()
+#3 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#4 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#5 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#6 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php(651): Illuminate\\Container\\BoundMethod::call()
+#7 /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Illuminate\\Container\\Container->call()
+#8 /var/www/html/vendor/symfony/console/Command/Command.php(308): Illuminate\\Console\\Command->execute()
+#9 /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php(121): Symfony\\Component\\Console\\Command\\Command->run()
+#10 /var/www/html/vendor/symfony/console/Application.php(998): Illuminate\\Console\\Command->run()
+#11 /var/www/html/vendor/symfony/console/Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand()
+#12 /var/www/html/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#13 /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Application.php(102): Symfony\\Component\\Console\\Application->run()
+#14 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run()
+#15 /var/www/html/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#16 {main}
+"} 
+[2022-06-29 18:07:32] local.ERROR: Call to a member function isEmpty() on null {"exception":"[object] (Error(code: 0): Call to a member function isEmpty() on null at /var/www/html/app/Console/Commands/FormatData.php:102)
+[stacktrace]
+#0 /var/www/html/app/Console/Commands/FormatData.php(157): App\\Console\\Commands\\FormatData->getStartEndFromManualTime()
+#1 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Console\\Commands\\FormatData->handle()
+#2 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#4 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#5 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php(651): Illuminate\\Container\\BoundMethod::call()
+#6 /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Illuminate\\Container\\Container->call()
+#7 /var/www/html/vendor/symfony/console/Command/Command.php(308): Illuminate\\Console\\Command->execute()
+#8 /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php(121): Symfony\\Component\\Console\\Command\\Command->run()
+#9 /var/www/html/vendor/symfony/console/Application.php(998): Illuminate\\Console\\Command->run()
+#10 /var/www/html/vendor/symfony/console/Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand()
+#11 /var/www/html/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#12 /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Application.php(102): Symfony\\Component\\Console\\Application->run()
+#13 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run()
+#14 /var/www/html/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#15 {main}
+"} 
+[2022-06-29 18:08:58] local.ERROR: App\Console\Commands\StartEnd::__construct(): Argument #1 ($s) must be of type ?Carbon\Carbon, string given, called in /var/www/html/app/Console/Commands/FormatData.php on line 94 {"exception":"[object] (TypeError(code: 0): App\\Console\\Commands\\StartEnd::__construct(): Argument #1 ($s) must be of type ?Carbon\\Carbon, string given, called in /var/www/html/app/Console/Commands/FormatData.php on line 94 at /var/www/html/app/Console/Commands/FormatData.php:35)
+[stacktrace]
+#0 /var/www/html/app/Console/Commands/FormatData.php(94): App\\Console\\Commands\\StartEnd->__construct()
+#1 /var/www/html/app/Console/Commands/FormatData.php(156): App\\Console\\Commands\\FormatData->getStartEndFromTouchHistory()
+#2 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Console\\Commands\\FormatData->handle()
+#3 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#4 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#5 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#6 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php(651): Illuminate\\Container\\BoundMethod::call()
+#7 /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Illuminate\\Container\\Container->call()
+#8 /var/www/html/vendor/symfony/console/Command/Command.php(308): Illuminate\\Console\\Command->execute()
+#9 /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php(121): Symfony\\Component\\Console\\Command\\Command->run()
+#10 /var/www/html/vendor/symfony/console/Application.php(998): Illuminate\\Console\\Command->run()
+#11 /var/www/html/vendor/symfony/console/Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand()
+#12 /var/www/html/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#13 /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Application.php(102): Symfony\\Component\\Console\\Application->run()
+#14 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run()
+#15 /var/www/html/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#16 {main}
+"} 
+[2022-06-29 18:11:04] local.ERROR: syntax error, unexpected variable "$start_time" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected variable \"$start_time\" at /var/www/html/app/Console/Commands/FormatData.php:99)
+[stacktrace]
+#0 /var/www/html/vendor/composer/ClassLoader.php(428): Composer\\Autoload\\includeFile()
+#1 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#2 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(229): is_subclass_of()
+#3 /var/www/html/app/Console/Kernel.php(47): Illuminate\\Foundation\\Console\\Kernel->load()
+#4 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(316): App\\Console\\Kernel->commands()
+#5 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#6 /var/www/html/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#7 {main}
+"} 
+[2022-06-29 18:12:03] local.ERROR: syntax error, unexpected variable "$dsaf" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected variable \"$dsaf\" at /var/www/html/app/Console/Commands/FormatData.php:99)
+[stacktrace]
+#0 /var/www/html/vendor/composer/ClassLoader.php(428): Composer\\Autoload\\includeFile()
+#1 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#2 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(229): is_subclass_of()
+#3 /var/www/html/app/Console/Kernel.php(47): Illuminate\\Foundation\\Console\\Kernel->load()
+#4 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(316): App\\Console\\Kernel->commands()
+#5 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#6 /var/www/html/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#7 {main}
+"} 
+[2022-06-29 18:38:03] local.ERROR: syntax error, unexpected token "}" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \"}\" at /var/www/html/app/Console/Commands/FormatData.php:105)
+[stacktrace]
+#0 /var/www/html/vendor/composer/ClassLoader.php(428): Composer\\Autoload\\includeFile()
+#1 [internal function]: Composer\\Autoload\\ClassLoader->loadClass()
+#2 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(229): is_subclass_of()
+#3 /var/www/html/app/Console/Kernel.php(47): Illuminate\\Foundation\\Console\\Kernel->load()
+#4 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(316): App\\Console\\Kernel->commands()
+#5 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#6 /var/www/html/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#7 {main}
+"} 
+[2022-06-29 18:40:23] local.ERROR: App\Console\Commands\StartEnd::__construct(): Argument #1 ($s) must be of type ?Carbon\Carbon, string given, called in /var/www/html/app/Console/Commands/FormatData.php on line 94 {"exception":"[object] (TypeError(code: 0): App\\Console\\Commands\\StartEnd::__construct(): Argument #1 ($s) must be of type ?Carbon\\Carbon, string given, called in /var/www/html/app/Console/Commands/FormatData.php on line 94 at /var/www/html/app/Console/Commands/FormatData.php:35)
+[stacktrace]
+#0 /var/www/html/app/Console/Commands/FormatData.php(94): App\\Console\\Commands\\StartEnd->__construct()
+#1 /var/www/html/app/Console/Commands/FormatData.php(157): App\\Console\\Commands\\FormatData->getStartEndFromTouchHistory()
+#2 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Console\\Commands\\FormatData->handle()
+#3 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#4 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#5 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#6 /var/www/html/vendor/laravel/framework/src/Illuminate/Container/Container.php(651): Illuminate\\Container\\BoundMethod::call()
+#7 /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php(136): Illuminate\\Container\\Container->call()
+#8 /var/www/html/vendor/symfony/console/Command/Command.php(308): Illuminate\\Console\\Command->execute()
+#9 /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Command.php(121): Symfony\\Component\\Console\\Command\\Command->run()
+#10 /var/www/html/vendor/symfony/console/Application.php(998): Illuminate\\Console\\Command->run()
+#11 /var/www/html/vendor/symfony/console/Application.php(299): Symfony\\Component\\Console\\Application->doRunCommand()
+#12 /var/www/html/vendor/symfony/console/Application.php(171): Symfony\\Component\\Console\\Application->doRun()
+#13 /var/www/html/vendor/laravel/framework/src/Illuminate/Console/Application.php(102): Symfony\\Component\\Console\\Application->run()
+#14 /var/www/html/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(129): Illuminate\\Console\\Application->run()
+#15 /var/www/html/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#16 {main}
+"} 
+[2022-06-29 19:00:04] local.INFO: データフォーマット成功  
+[2022-06-29 20:00:04] local.INFO: データフォーマット成功  
+[2022-06-29 21:00:04] local.INFO: データフォーマット成功  
+[2022-06-29 22:00:03] local.INFO: データフォーマット成功  
+[2022-06-29 23:00:04] local.INFO: データフォーマット成功  
+[2022-06-30 00:00:04] local.INFO: データフォーマット成功  
+[2022-06-30 01:00:03] local.INFO: データフォーマット成功  
+[2022-06-30 02:00:03] local.INFO: データフォーマット成功  
+[2022-06-30 03:00:03] local.INFO: データフォーマット成功  
+[2022-06-30 04:00:04] local.INFO: データフォーマット成功  
+[2022-06-30 05:00:03] local.INFO: データフォーマット成功  
+[2022-06-30 06:00:04] local.INFO: データフォーマット成功  
+[2022-06-30 07:00:05] local.INFO: データフォーマット成功  
+[2022-06-30 08:00:04] local.INFO: データフォーマット成功  
+[2022-06-30 09:00:03] local.INFO: データフォーマット成功  
+[2022-06-30 10:00:03] local.INFO: データフォーマット成功  
+[2022-06-30 11:00:03] local.INFO: データフォーマット成功  
+[2022-06-30 12:00:03] local.INFO: データフォーマット成功  
+[2022-06-30 13:00:03] local.INFO: データフォーマット成功  
+[2022-06-30 14:00:04] local.INFO: データフォーマット成功  
+[2022-06-30 15:00:03] local.INFO: データフォーマット成功  
+[2022-06-30 16:00:04] local.INFO: データフォーマット成功  
+[2022-06-30 17:00:03] local.INFO: データフォーマット成功  
