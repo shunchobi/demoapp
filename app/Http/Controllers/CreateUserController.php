@@ -11,6 +11,8 @@ use App\Models\UserTouchHistory;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Validator;
+
 
 class CreateUserController extends Controller
 {
@@ -37,6 +39,12 @@ class CreateUserController extends Controller
 
     public function createManualStartEndTime(Request $request)
     {
+        $request->validate([
+            'user_id' => 'required',
+            'datetime' => 'required',
+            'start_or_end' => 'required',
+        ]);
+
         $user_id = $request->user_id;
         // $date = mb_substr($request->datetime, 0, 10); // 2022-06-29T15:41
         $date = Carbon::parse($request->datetime)->format('Y-m-d');
@@ -58,6 +66,10 @@ class CreateUserController extends Controller
 
     public function createUser(Request $request)
     {
+        $request->validate([
+            'new_user_name' => 'required',
+        ]);
+
         User::create([
             'name' => $request->new_user_name,
         ]);
@@ -69,6 +81,12 @@ class CreateUserController extends Controller
     
     public function updateUserId(Request $request)
     {
+        // dd($request);
+        $request->validate([
+            'selected_user_id' => 'required|array',
+            'selected_user_id.*' => 'required|integer',
+        ]);
+
         for ($i=0; $i < count($request->card_id); $i++) { 
             
             $target_card = Card::where('id', $request->card_id[$i])->first();

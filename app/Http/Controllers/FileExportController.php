@@ -38,6 +38,10 @@ class FileExportController extends Controller
 
     public function download(Request $request)
     {
+        $request->validate([
+            'selected_y_m' => 'required'
+        ]);
+
         // 指定された取得したい年月をRequestで受け取り、値を定義
         $target_export_y_m = $request->selected_y_m;
 

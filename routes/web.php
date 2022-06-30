@@ -7,7 +7,7 @@ use App\Http\Controllers\CreateUserController;
 use App\Http\Controllers\FileExportController;
 use App\Http\Controllers\HomeController;
 
-// Auth::routes();
+Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
