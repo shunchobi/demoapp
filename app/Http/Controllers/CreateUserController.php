@@ -18,6 +18,9 @@ class CreateUserController extends Controller
 {
 
   
+    /// 認証
+    /// middleware
+
     
     public function showManagementPage()
     {
